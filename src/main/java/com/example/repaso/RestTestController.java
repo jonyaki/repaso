@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/service")
 public class RestTestController {
-	
+	//prueba comit 
 	@DeleteMapping("/deleteMarca/{idMarca}")
 	public ResponseEntity<String> delete(@PathVariable Long idMarca) {		
 		if(idMarca.equals(1L)) {
