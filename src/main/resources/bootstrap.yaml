@@ -1,0 +1,9 @@
+spring:
+   aplication:
+      name:repaso
+   cloud:
+      config:
+         enabled:true
+         uri:http//localhost:8081
+jwt:
+   secret: secret
