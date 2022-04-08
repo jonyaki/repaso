@@ -16,6 +16,7 @@ import java.util.Map;
 
 @Component
 public class JWTProvider {
+
 	@Value("${jwt.secret}")
 	private String secret;
 
@@ -24,7 +25,7 @@ public class JWTProvider {
 		secret = Base64.getEncoder().encodeToString(secret.getBytes());
 	}
 
-	public String CreateToken(AuthUser authUser) {
+	public String createToken(AuthUser authUser) {
 		Map<String, Object> claims = new HashMap<>();
 		claims = Jwts.claims().setSubject(authUser.getUserName());
 		claims.put("id", authUser.getUserName());
